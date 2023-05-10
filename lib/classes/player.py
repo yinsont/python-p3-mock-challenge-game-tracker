@@ -33,10 +33,11 @@ class Player:
         return game in self._games_played
     
     def num_times_played(self, game):
-        count = 0
-        for result in self._results:
-            if game == result.game:
-                count += 1
+        # count = 0
+        # for result in self._results:
+        #     if game == result.game:
+        #         count += 1
+        return len([r for r in self._results if r.game == game])
         return count
     
     @classmethod
